@@ -91,7 +91,7 @@ popupData.forEach((d) => {
       <div class="grey-bckgd"></div>
       <div class="card-contents">
       <div class="card-subt">
-        <h3>{workTitle}</h3>
+        <h3>${workTitle}</h3>
       </div>
       <div class="card-buttons">
         <ul>`;
