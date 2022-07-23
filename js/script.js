@@ -91,7 +91,7 @@ popupData.forEach((d) => {
       <div class="grey-bckgd"></div>
       <div class="card-contents">
       <div class="card-subt">
-        <h3>{workTitle}</h3>
+        <h3>${workTitle}</h3>
       </div>
       <div class="card-buttons">
         <ul>`;
@@ -197,6 +197,7 @@ document.querySelectorAll('.cProject').forEach((cl) => {
     document.querySelector('.modal').innerHTML = inHtml;
 
     document.getElementById('closePopupIcon').addEventListener('click', () => {
+      sec.parentNode.removeChild(sec);
       document.body.removeChild(overlay);
     });
 
@@ -216,7 +217,7 @@ form.addEventListener('submit', (formy) => {
   if (email.value.toLowerCase() !== email.value.toUpperCase()) {
     formy.preventDefault();
     emailLabel.innerHTML = 'E-mail cannot have upper-case letters. Transforming to lower-case';
-    email.value = emaoil.value.toLowerCase();
+    email.value = email.value.toLowerCase();
   }
 });
 email.addEventListener('change', () => {
@@ -239,6 +240,6 @@ document.querySelectorAll('.form-field').forEach((f) => {
 
 Object.keys(window.localStorage).forEach((d) => {
   if (window.localStorage[d] !== '') {
-    usrFielss[d].value = window.localStorage[d];
+    usrFields[d].value = window.localStorage[d];
   }
 });
